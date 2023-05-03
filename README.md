@@ -20,3 +20,6 @@ In another collaboration project, I worked with four of my classmates to create 
  Clustering: [clustering](Notebook_3_Clustering.pdf),
  Dimensionality Reduction: [dim_red.](Dimensionality_Reduction.pdf),
  Similarity & Ensemble Methods: [sim_ens](CS4375_Similarity_and_Ensemble_Team_Project.pdf).
+
+## Ensemble Learning
+For this R file, I implemented two ensemble methods called RandomForest and XGBoost to provide me with more practice regarding the topic of Machine Learning. The code can be located [here](Ensemble_Methods.Rmd) and the supportive write-up can be found [here](Ensemble_Methods-1.pdf).
