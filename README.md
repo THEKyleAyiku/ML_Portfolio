@@ -12,3 +12,11 @@ Linear regression is a technique which is utilized for predictions for variables
 
 ## C++ Algorithms from Scratch
 I feel as though that C++ heavily inspired R to where the language is today. So during my class, I collaborated with a partner to code not one, but two C++ algorithms for Logistic Regression and Naive Bayes. Our attempt for the algorithms are located [code here](naive.cpp) and [more code here](logreg.cpp). Additionally, the document write up can be located [here](Assignment_4.pdf).
+
+## Similarity & Ensemble
+In another collaboration project, I worked with four of my classmates to create a four-notebook project which involved regression, classification, clustering, and dimensionality reduction techniques to discover the similarities between these four types of techniques and also how they are utilizable for Machine Learning. The fifth member had to be a manager and essentially evaluate each and every single one of our parts to see if any of our notebooks could be imporved upon. In addition, my manager was prompted to write about each method in one document. I specifically worked on the regression portion of the project, so I was able to successfully perform Linear Regression and kNN Regression; for viewing my code in R, the algorithms and my analysis can be found [code here](Group_Project.rmd) and my write-up can be found [here](Regression-3.pdf) as well. Also, my manager's document and my other collaborators' coding outputs and write-ups can be found below:
+
+ Classification: [classification](Classification-1.pdf)
+ Clustering: [clustering](Notebook_3_Clustering.pdf)
+ Dimensionality Reduction: [dim_red.](Dimensionality_Reduction.pdf)
+ Similarity & Ensemble Methods: [sim_ens.](CS4375_Similarity_and_Ensemble_Team_Project.pdf).
