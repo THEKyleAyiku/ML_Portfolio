@@ -23,3 +23,6 @@ In another collaboration project, I worked with four of my classmates to create 
 
 ## Ensemble Learning
 For this R file, I implemented two ensemble methods called RandomForest and XGBoost to provide me with more practice regarding the topic of Machine Learning. The code can be located [here](Ensemble_Methods.Rmd) and the supportive write-up can be found [here](Ensemble_Methods-1.pdf).
+
+## Python sklearn
+This is my first introduction to the widely universe that is Python as I implemented data exploration, a neural network, Logistic Regression, etc. in order to gain some experience with Machine Learning for Python. The Python code can be found [here](sklearn_assignment(1).py).
