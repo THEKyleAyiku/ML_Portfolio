@@ -29,3 +29,6 @@ This is my first introduction to the widely universe that is Python as I impleme
 
 ## Image Classification
 This is my attempt in trying to perform Image Classification in Python. The code can be found [here](image_classification.py).
+
+## Future in Machine Learning
+Throughout my time in "Introduction to Machine Learning," I have learned various methods and techniques which would not only be useful in my real-world understanding of Machine Learning, but they are also key in advancing my prowess for my major being Data Science as well. I will admit that I have not mastered every technique when Machine Learning is involved. However, I plan on advancing my skills in the field even further by conducting more research on the techniques I need to work on, the topics that I am interested in, and mayhe even inquiring a professor at my university who is quite knowledgeable in ML to see if I can complete a research project under their guidance. In addition, I will be reading research papers and articles to truly pique my profound interest in ML and Artificial Intelligence as a whole to evaluate what the latest trends and technologies are and how I can use that for my future application in acquiring an internship and/or a solid full-time occupation.
