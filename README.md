@@ -26,3 +26,6 @@ For this R file, I implemented two ensemble methods called RandomForest and XGBo
 
 ## Python sklearn
 This is my first introduction to the widely universe that is Python as I implemented data exploration, a neural network, Logistic Regression, etc. in order to gain some experience with Machine Learning for Python. The Python code can be found [here](sklearn_assignment(1).py).
+
+## Image Classification
+This is my attempt in trying to perform Image Classification in Python. The code can be found [here](image_classification.py).
