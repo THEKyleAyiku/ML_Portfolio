@@ -1,0 +1,80 @@
+---
+title: "R Notebook"
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+
+Libraries for the Ensemble Methods
+```{r}
+library(randomForest)
+library(xgboost)
+library(mltools)
+library(mccr)
+```
+
+Loading the data set.
+```{r}
+# Reading in the data set.
+setwd("C:/Users/amark/Downloads")
+df <- read.csv("airlines.csv")
+
+# Condensing the data down into a medium-sized set.
+num1 <- sample(1:nrow(df), 0.98 * nrow(df), replace = FALSE)
+df <- df[-num1,]
+```
+
+
+Bit of Data Exploration
+```{r}
+# Converting DayOfWeek & Class (target) into factor variables.
+df$DayOfWeek <- factor(df$DayOfWeek)
+df$Class <- factor(df$Class)
+
+
+# Splitting into 75% train and 25% test.
+set.seed(1234) # For reproducible results.
+num1 <- sample(nrow(df), 0.75 * nrow(df), replace = FALSE)
+train <- df[num1,]
+test <- df[-num1,]
+```
+
+
+Implementing RandomForest
+```{r}
+# This is the randomForest method.
+set.seed(1234) # For reproducible results.
+print(rf <- randomForest(Class ~ ., data = train, importance = TRUE))
+
+pred1 <- predict(rf, newdata = test, type = "response")
+print(acc_rf <- mean(pred1 == test$Class))
+print(mcc_rf <- mcc(factor(pred1), test$Class))
+```
+
+
+Implementing XGBoost
+```{r}
+# This is the XGBoost method.
+set.seed(1234) # For reproducible results.
+
+train_label <- ifelse(train$Class == 1, 1, 0)
+train_matrix <- data.matrix(train[, -29])
+model <- xgboost(data = train_matrix, label = train_label, nrounds = 100, objective = 'binary:logistic')
+
+test_label <- ifelse(test$Class == 1, 1, 0)
+test_matrix <- data.matrix(test[, -23])
+
+probs <- predict(model, test_matrix)
+pred2 <- ifelse(probs > 0.5, 1, 0)
+
+print(acc_xg <- mean(pred2 == test_label))
+print(mcc_xg <- mcc(pred2, test_label))
+```
+
+
+Summary: The ensemble method of randomForest ran at a moderate pace, 
+given how large the data set truly is, even after condensing it to about 10,000 
+rows. Although the accuracies for the method was only around 54%, I would say the algorithm was less efficient compared to the faster and apparently accurate 
+XGBoost, which its accuracy was 100% and I got quicker results than even logistic
+regression and naive baes, when those classification methods were ran.
